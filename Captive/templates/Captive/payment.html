@@ -4,7 +4,7 @@
 
 {%block extra_css%}
 <link rel="stylesheet" href="{% static 'Captive/pay.css' %}">
-<link rel="icon" href="{% static 'Captive/images/favicon.ico' %}" type="image/x-icon">
+<link rel="png" href="{% static 'Captive/images/favicon.png' %}" type="image/x-icon">
 {%endblock%}
 
 
@@ -45,7 +45,7 @@
             }
             // Optional: Add Safaricom number format validation
             else if (!/^07|01\d{8}$/.test(phoneNumber)) {
-                alert("Please enter a valid Safaricom number (e.g. 0712345678 or 0112345678)");
+                alert("Please enter a valid Safaricom number (e.g. 0718804358 or 0112345678)");
                 event.preventDefault();
             }
         });

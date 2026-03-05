@@ -1,4 +1,5 @@
 from django.shortcuts import render,redirect
+from django.http import HttpResponse
 import requests, base64, json
 from datetime import datetime
 from Captive.models import Transaction
