@@ -17,7 +17,13 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(',')
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(','),
+ALLOWED_HOSTS: list[str] = [
+    ".railway.app",
+    "localhost",
+    "127.0.0.1"
+]
+
 
 
 # Application definition
@@ -124,6 +130,10 @@ STORAGES = {
     "staticfiles": {"BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage"},
     "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
 }
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.up.railway.app",
+]
 
 
 # Default primary key field type
