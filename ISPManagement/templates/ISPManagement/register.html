@@ -12,7 +12,7 @@
     <li>Make payment to the Till number:<strong> 6838079</strong></li>
 </ol> 
 <form method="POST" action="{% url 'register' %}">
-     <marquee behavior="" direction="left"  style="color: rgb(0, 17, 255);">Having trouble Creating/connecting to your account? kindly contact: 0718804358</marquee>
+     <marquee behavior="" direction="left"  style="color: rgb(0, 17, 255);">System activation fee @1000. Having trouble Creating/connecting to your account? kindly contact: 0718804358</marquee>
     {% csrf_token %}
     {{form}}
     <input type="hidden" name="mpesa" value="{{ mpesacode }}">
